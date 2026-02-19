@@ -31,8 +31,9 @@ border-radius: 8px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
+/*898E70*/
 .card2 { 
-background: #a6a452; 
+background: #898E70; 
 padding: 20px; 
 margin-bottom: 20px; 
 border-radius: 8px; 
@@ -103,12 +104,14 @@ form {
 input, textarea { 
   padding: 8px; 
   border: 1px solid #ccc; 
+  background-color: white;
   border-radius: 4px; 
 } 
  
+/*a6a452*/
 button { 
   padding: 10px; 
-  background-color: #a6a452; 
+  background-color: #898E70; 
   color: white; 
   border: none; 
   cursor: pointer; 
@@ -117,3 +120,49 @@ button {
 button:hover { 
   background-color: #372c28; 
 } 
+
+
+
+
+
+
+
+.dark-mode { 
+background-color:#111111; 
+color:white; 
+}
+.dark-mode .card{ 
+background-color:#232323;
+}
+.dark-mode .card2 { 
+background: #343434; 
+}
+.dark-mode button { 
+background: #343434; 
+}
+.dark-mode button:hover { 
+  background-color: #111111; 
+} 
+.dark-mode th, td {
+  border: 1px solid #111111; 
+  padding: 8px; 
+}
+.dark-mode th { 
+  background-color: #343434; 
+  color: white; 
+} 
+.dark-mode input, textarea { 
+  padding: 8px; 
+  border: 1px solid #242424; 
+  background-color: #464646;
+  border-radius: 4px; 
+} 
+
+
+
+
+.hidden {
+  display:none;
+}
+
+
