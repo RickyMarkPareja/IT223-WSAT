@@ -21,7 +21,13 @@ submitBtn.addEventListener("click", function(event){
 /* Add Dark Mode Button */
 const themeToggle = document.getElementById("themeToggle"); 
 themeToggle.addEventListener("click",function(){ 
-    document.body.classList.toggle("dark-mode"); 
+    document.body.classList.toggle("dark-mode");
+    /* Change text when clicked */
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "Toggle Light Mode";
+    } else {
+        themeToggle.textContent = "Toggle Dark Mode";
+    }
 });
 
 
