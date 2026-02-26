@@ -101,10 +101,12 @@ form {
   gap: 10px; 
 } 
  
-input, textarea { 
+input, 
+textarea { 
   padding: 8px; 
   border: 1px solid #ccc; 
-  background-color: white;
+  background-color: #ffffff;
+  color: #000000;
   border-radius: 4px; 
 } 
  
@@ -151,10 +153,11 @@ background: #343434;
   background-color: #343434; 
   color: white; 
 } 
-.dark-mode input, textarea { 
-  padding: 8px; 
+.dark-mode input, 
+.dark-mode textarea { 
   border: 1px solid #242424; 
   background-color: #464646;
+  color: #ffffff;
   border-radius: 4px; 
 } 
 
