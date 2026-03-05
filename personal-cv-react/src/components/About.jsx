@@ -1,12 +1,11 @@
 
 import profile from "../assets/profile.jpg";
+import Card from "./Card";
 
- function About() {
-    return (   
-            
-        <section className="card"> 
-            <h2>About Me</h2>
-
+function About() {
+    return ( 
+        
+        <Card title="About Me">
             <div style={{textAlign: "center"}}>
               <img src={profile} alt="Profile Photo During A Sunny Afternoon at Ayala Centrio, Cagayan De Oro." />
                 <p> I was born on November 2004, making me 21 years old as of witing.
@@ -21,9 +20,8 @@ import profile from "../assets/profile.jpg";
                 GitHub: 
                 <a href="https://github.com/RickyMarkPareja" target="_blank"> RickyMarkPareja@github.com</a> 
             </p> 
-        </section> 
-
-    );
+        </Card>
+    )
 }
 
 export default About;
