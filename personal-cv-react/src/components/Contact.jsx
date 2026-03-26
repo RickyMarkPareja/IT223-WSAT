@@ -8,34 +8,35 @@ function Contact() {
 
     function handleSubmit(e) { 
         e.preventDefault();     
-        alert(`Thank you ${name}!`); 
-    } 
+        /*alert(`Thank you ${name}!`);*/
+
+        fetch("http://localhost/cv-api/process.php", { 
+            method: "POST", 
+            headers: { 
+                "Content-Type": "application/json" 
+            }, 
+            body: JSON.stringify({ name: name }) 
+        }) 
+        .then(res => res.json()) 
+        .then(data => { 
+            if (data.message) { 
+                alert(data.message); 
+            } else { 
+            alert("Unexpected error occurred."); 
+            } 
+        }); 
+        }     
 
     return (   
-
-        /* --OLD CODE (before M6)-- 
-        <section className="card"> 
-            <h2>Contact Me</h2> 
-            <form> 
-                <input type="text" id="name" placeholder="Name"></input>
-                <br></br><br></br> 
-                <input type="email" id="email" placeholder="Email"></input>
-                <br></br><br></br> 
-                <textarea placeholder="Message"></textarea>
-                <br></br><br></br> 
-            <button type="submit" id="submitBtn">Send</button> 
-            </form> 
-        </section>
-        */
-
         <section className="card"> 
             <h2>Contact Me</h2> 
             <form onSubmit={handleSubmit}> 
                 <input 
                 type="text" 
-                id="name" placeholder="Name"
+                id="name"
                 value={name} 
                 onChange={(e) => setName(e.target.value)} 
+                placeholder="Name"
                 /> <br/>
 
                 <input 
