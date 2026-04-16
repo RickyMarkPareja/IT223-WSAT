@@ -3,6 +3,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import ContactList from "./components/ContactList";
 
 /* -- Data Arrays and Churva ---------------------------- */
 
@@ -58,6 +59,7 @@ function App() {
         <Skills skills={skills} />
         <Education education={education} />
         <Contact />
+        <ContactList />
 
         <footer>
         <p>&copy; 2026 Ricky Mark Pareja. All rights reserved.</p>
